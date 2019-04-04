@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "tplink-smarthome-api": "^1.2.0"
   }
 }
