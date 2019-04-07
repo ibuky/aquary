@@ -9,6 +9,9 @@
   "author": "ibuky",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "node-cron": "^2.0.3",
     "tplink-smarthome-api": "^1.2.0"
   }
