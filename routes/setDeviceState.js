@@ -29,7 +29,7 @@ router.get('/:dev/:st/', function(req, res, next) {
         status = 'false';
     }
 
-    command = `../node_modules/tplink-smarthome-api/lib/cli.js setPowerState ${ipaddr} ${status}`;
+    command = `node_modules/tplink-smarthome-api/lib/cli.js setPowerState ${ipaddr} ${status}`;
 
     exec(command, (err, stdout, stderr) => res.send("Device state changed."));
 });
