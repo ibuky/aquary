@@ -16,13 +16,13 @@ const { Client } = require('tplink-smarthome-api');
 const client = new Client();
 
 // 日中
-cron.schedule('0 0 11 * * *', () => {
+cron.schedule('0 0 13 * * *', () => {
     client.getDevice({host: Const.IPADDR_DAYTIME}).then((dev) => dev.setPowerState(true));
     client.getDevice({host: Const.IPADDR_NIGHT}).then((dev) => dev.setPowerState(false));
 });
 
 // 夜間
-cron.schedule('0 30 23 * * *', () => {
+cron.schedule('0 0 23 * * *', () => {
     client.getDevice({host: Const.IPADDR_DAYTIME}).then((dev) => dev.setPowerState(false));
     client.getDevice({host: Const.IPADDR_NIGHT}).then((dev) => dev.setPowerState(true));
 });
